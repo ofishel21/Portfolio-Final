@@ -85,7 +85,7 @@ a{
 .active{
     background-color: #929397d7;
     font-weight: bold;
-    border: 2px solid black; 
+    border: 3px solid black; 
 }
 
 .page{
@@ -105,10 +105,6 @@ img{
 
 /*Index*/
 
-/*.container-index{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-}*/
 
 .index-p1{
     background-color: white;
@@ -152,12 +148,6 @@ img{
     margin: auto;
 }
 
-/*.container-about img{
-    object-fit: cover;
-    width: 80%;
-    max-height: 80%
-}*/
-
 .about-p1, .about-p2{
     background-color: white;
     width: fit-content;
@@ -179,20 +169,11 @@ img{
     object-fit: cover;
     width: 80%;
     height: 100%;
-    align-items: center;
+    justify-items: center;
     margin: auto;
 }
 
 /*Hobbies and Family*/
-.containerfamily{
-    /*display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    margin: auto;*/
-}
 
 .family-images{
     display: flex;
@@ -327,7 +308,7 @@ input {
     transform-style: preserve-3d;
 }
 
-.flipcard:hover .flipcard-inner, .flipcard:active{
+.flipcard:hover .flipcard-inner, .flipcard:active .flipcard-inner{
     transform: rotateY(180deg);
 }
 
@@ -348,12 +329,10 @@ input {
 
 .flipcard-front {
     background-color: rgb(47, 111, 240);
-    color: black;
 }
 
 .flipcard-back {
     background-color: rgb(47, 111, 240);
-    color: white;
     transform: rotateY(180deg);
     height: 550px;
 }
@@ -380,21 +359,12 @@ img#flipheadshot{
     padding-top: 20px;
 }
 
-/*img:hover{
-   filter: grayscale();
-   border: 10px solid black; 
-   border-radius: 15px;
-} */
-
 /*Tablet*/
 
-@media screen and (min-width: 720px){
+@media screen and (min-width: 750px){
     .about-images{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        object-fit: cover;
-        width: 80%;
-        height: 100%;
         align-items: center;
         margin: auto;
         justify-content: center;
@@ -421,10 +391,8 @@ img#flipheadshot{
 
     .family-images{
         display: flex;
-        flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
-        margin: 50px;
         justify-content: space-evenly;
     }
 
@@ -433,13 +401,10 @@ img#flipheadshot{
     
 /*Desktop*/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1050px) {
     .about-images{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        object-fit: cover;
-        width: 80%;
-        height: 100%;
         align-items: center;
         margin: auto;
         justify-content: space-around;
@@ -467,11 +432,9 @@ img#flipheadshot{
 
     .family-images{
         display: flex;
-        flex-direction: row;
         align-items: flex-end;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin: 50px;
     }
 }
 
@@ -493,12 +456,12 @@ img#flipheadshot{
         animation:none;
     }
 
-    .flipcard{
-        animation: none;
+    .flipcard-inner{
+        transition: transform 0s;
     }
-
+    
     .skip{
-        -webkit-transition: none;
+        -webkit-transition:none;
         transition: none;
     }
 
