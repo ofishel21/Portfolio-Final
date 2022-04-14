@@ -68,7 +68,7 @@ a{
     color: black;
 }
 
-a.skip{
+.skip{
     position: absolute;
     left: -500px;
     background: white;
@@ -497,8 +497,13 @@ img#flipheadshot{
         animation: none;
     }
 
-    .skip:focus{
-        animation: none;
+    .skip{
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    .parallax{
+        background-attachment: scroll;
     }
   }
 
